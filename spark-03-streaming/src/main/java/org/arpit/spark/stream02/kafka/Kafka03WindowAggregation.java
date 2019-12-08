@@ -4,15 +4,17 @@ import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.apache.spark.SparkConf;
 import org.apache.spark.streaming.Durations;
-import org.apache.spark.streaming.api.java.JavaDStream;
 import org.apache.spark.streaming.api.java.JavaInputDStream;
+import org.apache.spark.streaming.api.java.JavaPairDStream;
 import org.apache.spark.streaming.api.java.JavaStreamingContext;
 import org.apache.spark.streaming.kafka010.ConsumerStrategies;
 import org.apache.spark.streaming.kafka010.ConsumerStrategy;
 import org.apache.spark.streaming.kafka010.KafkaUtils;
 import org.apache.spark.streaming.kafka010.LocationStrategies;
+import org.arpit.spark.common.util.Employee;
 import org.arpit.spark.common.util.LoggerUtil;
 import org.arpit.spark.stream00.common.C02KafkaJsonProducer;
+import scala.Tuple2;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -23,9 +25,9 @@ import java.util.Map;
  * Documentation : https://spark.apache.org/docs/2.4.0/streaming-kafka-0-10-integration.html
  * Run {@link C02KafkaJsonProducer} to produce employee json on kafka
  */
-public class Kafka01Transformation {
+public class Kafka03WindowAggregation {
 
-    private static final String APP_NAME = Kafka01Transformation.class.getName();
+    private static final String APP_NAME = Kafka03WindowAggregation.class.getName();
 
     public static void main(String[] args) throws Exception {
         LoggerUtil.disableSparkLogs();
@@ -37,9 +39,14 @@ public class Kafka01Transformation {
         final JavaInputDStream<ConsumerRecord<String, String>> kafkaDStream =
                 KafkaUtils.createDirectStream(jssc, LocationStrategies.PreferConsistent(), buildConsumerStrategy());
 
-        final JavaDStream<String> kafkaMessageStream = kafkaDStream.map(e -> e.value());
+        final JavaPairDStream<Long, String> employeeByCitySorted = kafkaDStream
+                .map(e -> Employee.fromJson(e.value()))
+                .mapToPair(e -> new Tuple2<>(e.getCity(), 1L))
+                .reduceByKeyAndWindow(((c1, c2) -> c1 + c2), Durations.seconds(30))
+                .mapToPair(t -> t.swap())
+                .transformToPair(rdd -> rdd.sortByKey(false));
 
-        kafkaMessageStream.print();
+        employeeByCitySorted.print();
 
         jssc.start();
         jssc.awaitTermination();

@@ -15,7 +15,7 @@ import java.util.Properties;
  */
 public class C02KafkaJsonProducer {
 
-    private static final int KAFKA_MESSAGE_COUNT = 5;
+    private static int SLEEP_INTERVAL = 500;
 
     public static final String KAFKA_BROKERS = "localhost:9092";
     public static final String KAFKA_TOPIC = "employee-spark-topic";
@@ -24,7 +24,7 @@ public class C02KafkaJsonProducer {
         Properties properties = buildKafkaProperties();
 
         Producer<String, String> producer = new KafkaProducer<>(properties);
-        for (int i = 0; i < KAFKA_MESSAGE_COUNT; i++) {
+        while (true) {
             String employeeJson = Employee.buildRandomEmployeeJson();
             System.out.println(employeeJson);
 
@@ -39,8 +39,9 @@ public class C02KafkaJsonProducer {
                 }
             });
             producer.flush();
+
+            Thread.sleep(SLEEP_INTERVAL);
         }
-        producer.close();
     }
 
     private static Properties buildKafkaProperties() {

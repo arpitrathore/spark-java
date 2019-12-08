@@ -7,10 +7,11 @@ import org.apache.spark.streaming.api.java.JavaReceiverInputDStream;
 import org.apache.spark.streaming.api.java.JavaStreamingContext;
 import org.arpit.spark.common.util.Employee;
 import org.arpit.spark.common.util.LoggerUtil;
+import org.arpit.spark.stream00.common.C01SocketProducer;
 import scala.Tuple2;
 
 /**
- * Run org.arpit.spark.stream00.common.C01SocketProducer.main() to produce employee json on port 10000
+ * Run {@link C01SocketProducer} to produce employee json on port 10000
  */
 public class DStream03WindowAggregation {
 
