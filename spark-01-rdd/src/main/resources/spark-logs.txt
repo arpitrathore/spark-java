@@ -1,0 +1,603 @@
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/12/08 11:08:01 INFO SparkContext: Running Spark version 2.4.0
+19/12/08 11:08:02 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/12/08 11:08:02 INFO SparkContext: Submitted application: org.arpit.spark.stream01.dstream.DStream03WindowAggregation
+19/12/08 11:08:02 INFO SecurityManager: Changing view acls to: root
+19/12/08 11:08:02 INFO SecurityManager: Changing modify acls to: root
+19/12/08 11:08:02 INFO SecurityManager: Changing view acls groups to: 
+19/12/08 11:08:02 INFO SecurityManager: Changing modify acls groups to: 
+19/12/08 11:08:02 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/12/08 11:08:03 INFO Utils: Successfully started service 'sparkDriver' on port 59617.
+19/12/08 11:08:03 INFO SparkEnv: Registering MapOutputTracker
+19/12/08 11:08:03 INFO SparkEnv: Registering BlockManagerMaster
+19/12/08 11:08:03 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+19/12/08 11:08:03 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+19/12/08 11:08:03 INFO DiskBlockManager: Created local directory at C:\Users\root\AppData\Local\Temp\blockmgr-f616c46a-4a23-4b6e-80a9-7ecef85be182
+19/12/08 11:08:03 INFO MemoryStore: MemoryStore started with capacity 1929.0 MB
+19/12/08 11:08:03 INFO SparkEnv: Registering OutputCommitCoordinator
+19/12/08 11:08:04 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+19/12/08 11:08:04 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://lenovo.corp.company.com:4040
+19/12/08 11:08:04 INFO Executor: Starting executor ID driver on host localhost
+19/12/08 11:08:04 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 59658.
+19/12/08 11:08:04 INFO NettyBlockTransferService: Server created on lenovo.corp.company.com:59658
+19/12/08 11:08:04 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/12/08 11:08:04 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, lenovo.corp.company.com, 59658, None)
+19/12/08 11:08:04 INFO BlockManagerMasterEndpoint: Registering block manager lenovo.corp.company.com:59658 with 1929.0 MB RAM, BlockManagerId(driver, lenovo.corp.company.com, 59658, None)
+19/12/08 11:08:04 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, lenovo.corp.company.com, 59658, None)
+19/12/08 11:08:04 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, lenovo.corp.company.com, 59658, None)
+19/12/08 11:08:04 INFO ReceiverTracker: Starting 1 receivers
+19/12/08 11:08:04 INFO ReceiverTracker: ReceiverTracker started
+19/12/08 11:08:04 INFO ShuffledDStream: Duration for remembering RDDs set to 35000 ms for org.apache.spark.streaming.dstream.ShuffledDStream@b4e632f
+19/12/08 11:08:04 INFO MappedDStream: Duration for remembering RDDs set to 35000 ms for org.apache.spark.streaming.dstream.MappedDStream@50d4e19d
+19/12/08 11:08:04 INFO MappedDStream: Duration for remembering RDDs set to 35000 ms for org.apache.spark.streaming.dstream.MappedDStream@74dba97a
+19/12/08 11:08:04 INFO SocketInputDStream: Duration for remembering RDDs set to 35000 ms for org.apache.spark.streaming.dstream.SocketInputDStream@5488175e
+19/12/08 11:08:04 INFO SocketInputDStream: Slide time = 5000 ms
+19/12/08 11:08:04 INFO SocketInputDStream: Storage level = Serialized 1x Replicated
+19/12/08 11:08:04 INFO SocketInputDStream: Checkpoint interval = null
+19/12/08 11:08:04 INFO SocketInputDStream: Remember interval = 35000 ms
+19/12/08 11:08:04 INFO SocketInputDStream: Initialized and validated org.apache.spark.streaming.dstream.SocketInputDStream@5488175e
+19/12/08 11:08:04 INFO MappedDStream: Slide time = 5000 ms
+19/12/08 11:08:04 INFO MappedDStream: Storage level = Serialized 1x Replicated
+19/12/08 11:08:04 INFO MappedDStream: Checkpoint interval = null
+19/12/08 11:08:04 INFO MappedDStream: Remember interval = 35000 ms
+19/12/08 11:08:04 INFO MappedDStream: Initialized and validated org.apache.spark.streaming.dstream.MappedDStream@74dba97a
+19/12/08 11:08:04 INFO MappedDStream: Slide time = 5000 ms
+19/12/08 11:08:04 INFO MappedDStream: Storage level = Serialized 1x Replicated
+19/12/08 11:08:04 INFO MappedDStream: Checkpoint interval = null
+19/12/08 11:08:04 INFO MappedDStream: Remember interval = 35000 ms
+19/12/08 11:08:04 INFO MappedDStream: Initialized and validated org.apache.spark.streaming.dstream.MappedDStream@50d4e19d
+19/12/08 11:08:04 INFO ShuffledDStream: Slide time = 5000 ms
+19/12/08 11:08:04 INFO ShuffledDStream: Storage level = Memory Serialized 1x Replicated
+19/12/08 11:08:04 INFO ShuffledDStream: Checkpoint interval = null
+19/12/08 11:08:04 INFO ShuffledDStream: Remember interval = 35000 ms
+19/12/08 11:08:04 INFO ShuffledDStream: Initialized and validated org.apache.spark.streaming.dstream.ShuffledDStream@b4e632f
+19/12/08 11:08:04 INFO WindowedDStream: Slide time = 5000 ms
+19/12/08 11:08:04 INFO WindowedDStream: Storage level = Serialized 1x Replicated
+19/12/08 11:08:04 INFO WindowedDStream: Checkpoint interval = null
+19/12/08 11:08:04 INFO WindowedDStream: Remember interval = 5000 ms
+19/12/08 11:08:04 INFO WindowedDStream: Initialized and validated org.apache.spark.streaming.dstream.WindowedDStream@5fc24005
+19/12/08 11:08:04 INFO ShuffledDStream: Slide time = 5000 ms
+19/12/08 11:08:04 INFO ShuffledDStream: Storage level = Serialized 1x Replicated
+19/12/08 11:08:04 INFO ShuffledDStream: Checkpoint interval = null
+19/12/08 11:08:04 INFO ShuffledDStream: Remember interval = 5000 ms
+19/12/08 11:08:04 INFO ShuffledDStream: Initialized and validated org.apache.spark.streaming.dstream.ShuffledDStream@1e73f4a6
+19/12/08 11:08:04 INFO ForEachDStream: Slide time = 5000 ms
+19/12/08 11:08:04 INFO ForEachDStream: Storage level = Serialized 1x Replicated
+19/12/08 11:08:04 INFO ForEachDStream: Checkpoint interval = null
+19/12/08 11:08:04 INFO ForEachDStream: Remember interval = 5000 ms
+19/12/08 11:08:04 INFO ForEachDStream: Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@4dbb68da
+19/12/08 11:08:04 INFO ReceiverTracker: Receiver 0 started
+19/12/08 11:08:04 INFO RecurringTimer: Started timer for JobGenerator at time 1575783485000
+19/12/08 11:08:04 INFO JobGenerator: Started JobGenerator at 1575783485000 ms
+19/12/08 11:08:05 INFO JobScheduler: Started JobScheduler
+19/12/08 11:08:05 INFO DAGScheduler: Got job 0 (start at DStream03WindowAggregation.java:36) with 1 output partitions
+19/12/08 11:08:05 INFO DAGScheduler: Final stage: ResultStage 0 (start at DStream03WindowAggregation.java:36)
+19/12/08 11:08:05 INFO DAGScheduler: Parents of final stage: List()
+19/12/08 11:08:05 INFO StreamingContext: StreamingContext started
+19/12/08 11:08:05 INFO DAGScheduler: Missing parents: List()
+19/12/08 11:08:05 INFO DAGScheduler: Submitting ResultStage 0 (Receiver 0 ParallelCollectionRDD[0] at makeRDD at ReceiverTracker.scala:614), which has no missing parents
+19/12/08 11:08:05 INFO ShuffledDStream: Slicing from 1575783460000 ms to 1575783485000 ms (aligned to 1575783460000 ms and 1575783485000 ms)
+19/12/08 11:08:05 INFO ShuffledDStream: Time 1575783480000 ms is invalid as zeroTime is 1575783480000 ms , slideDuration is 5000 ms and difference is 0 ms
+19/12/08 11:08:05 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 46.6 KB, free 1929.0 MB)
+19/12/08 11:08:05 INFO JobScheduler: Added jobs for time 1575783485000 ms
+19/12/08 11:08:05 INFO JobScheduler: Starting job streaming job 1575783485000 ms.0 from job set of time 1575783485000 ms
+19/12/08 11:08:05 INFO SparkContext: Starting job: print at DStream03WindowAggregation.java:34
+19/12/08 11:08:05 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 15.9 KB, free 1928.9 MB)
+19/12/08 11:08:05 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on lenovo.corp.company.com:59658 (size: 15.9 KB, free: 1929.0 MB)
+19/12/08 11:08:05 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1161
+19/12/08 11:08:05 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (Receiver 0 ParallelCollectionRDD[0] at makeRDD at ReceiverTracker.scala:614) (first 15 tasks are for partitions Vector(0))
+19/12/08 11:08:05 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+19/12/08 11:08:05 INFO DAGScheduler: Registering RDD 3 (mapToPair at DStream03WindowAggregation.java:31)
+19/12/08 11:08:05 INFO DAGScheduler: Got job 1 (print at DStream03WindowAggregation.java:34) with 1 output partitions
+19/12/08 11:08:05 INFO DAGScheduler: Final stage: ResultStage 2 (print at DStream03WindowAggregation.java:34)
+19/12/08 11:08:05 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 1)
+19/12/08 11:08:05 INFO DAGScheduler: Missing parents: List()
+19/12/08 11:08:05 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[6] at reduceByKeyAndWindow at DStream03WindowAggregation.java:32), which has no missing parents
+19/12/08 11:08:05 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 4.9 KB, free 1928.9 MB)
+19/12/08 11:08:05 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.8 KB, free 1928.9 MB)
+19/12/08 11:08:05 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on lenovo.corp.company.com:59658 (size: 2.8 KB, free: 1929.0 MB)
+19/12/08 11:08:05 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1161
+19/12/08 11:08:05 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 8455 bytes)
+19/12/08 11:08:05 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[6] at reduceByKeyAndWindow at DStream03WindowAggregation.java:32) (first 15 tasks are for partitions Vector(0))
+19/12/08 11:08:05 INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks
+19/12/08 11:08:05 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+19/12/08 11:08:05 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 1, localhost, executor driver, partition 0, PROCESS_LOCAL, 7838 bytes)
+19/12/08 11:08:05 INFO Executor: Running task 0.0 in stage 2.0 (TID 1)
+19/12/08 11:08:05 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+19/12/08 11:08:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 6 ms
+19/12/08 11:08:05 INFO RecurringTimer: Started timer for BlockGenerator at time 1575783485400
+19/12/08 11:08:05 INFO BlockGenerator: Started BlockGenerator
+19/12/08 11:08:05 INFO BlockGenerator: Started block pushing thread
+19/12/08 11:08:05 INFO ReceiverTracker: Registered receiver for stream 0 from lenovo.corp.company.com:59617
+19/12/08 11:08:05 INFO ReceiverSupervisorImpl: Starting receiver 0
+19/12/08 11:08:05 INFO SocketReceiver: Connecting to localhost:10000
+19/12/08 11:08:05 INFO MemoryStore: Block rdd_4_0 stored as values in memory (estimated size 4.0 B, free 1928.9 MB)
+19/12/08 11:08:05 INFO BlockManagerInfo: Added rdd_4_0 in memory on lenovo.corp.company.com:59658 (size: 4.0 B, free: 1929.0 MB)
+19/12/08 11:08:05 INFO SocketReceiver: Connected to localhost:10000
+19/12/08 11:08:05 INFO ReceiverSupervisorImpl: Called receiver 0 onStart
+19/12/08 11:08:05 INFO ReceiverSupervisorImpl: Waiting for receiver to be stopped
+19/12/08 11:08:05 INFO Executor: Finished task 0.0 in stage 2.0 (TID 1). 1091 bytes result sent to driver
+19/12/08 11:08:05 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 1) in 158 ms on localhost (executor driver) (1/1)
+19/12/08 11:08:05 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+19/12/08 11:08:05 INFO DAGScheduler: ResultStage 2 (print at DStream03WindowAggregation.java:34) finished in 0.189 s
+19/12/08 11:08:05 INFO DAGScheduler: Job 1 finished: print at DStream03WindowAggregation.java:34, took 0.268935 s
+19/12/08 11:08:05 INFO SparkContext: Starting job: print at DStream03WindowAggregation.java:34
+19/12/08 11:08:05 INFO DAGScheduler: Got job 2 (print at DStream03WindowAggregation.java:34) with 4 output partitions
+19/12/08 11:08:05 INFO DAGScheduler: Final stage: ResultStage 4 (print at DStream03WindowAggregation.java:34)
+19/12/08 11:08:05 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 3)
+19/12/08 11:08:05 INFO DAGScheduler: Missing parents: List()
+19/12/08 11:08:05 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[6] at reduceByKeyAndWindow at DStream03WindowAggregation.java:32), which has no missing parents
+19/12/08 11:08:05 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 4.9 KB, free 1928.9 MB)
+19/12/08 11:08:05 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.8 KB, free 1928.9 MB)
+19/12/08 11:08:05 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on lenovo.corp.company.com:59658 (size: 2.8 KB, free: 1929.0 MB)
+19/12/08 11:08:05 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1161
+19/12/08 11:08:05 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 4 (MapPartitionsRDD[6] at reduceByKeyAndWindow at DStream03WindowAggregation.java:32) (first 15 tasks are for partitions Vector(1, 2, 3, 4))
+19/12/08 11:08:05 INFO TaskSchedulerImpl: Adding task set 4.0 with 4 tasks
+19/12/08 11:08:05 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 2, localhost, executor driver, partition 1, PROCESS_LOCAL, 7838 bytes)
+19/12/08 11:08:05 INFO TaskSetManager: Starting task 1.0 in stage 4.0 (TID 3, localhost, executor driver, partition 2, PROCESS_LOCAL, 7838 bytes)
+19/12/08 11:08:05 INFO TaskSetManager: Starting task 2.0 in stage 4.0 (TID 4, localhost, executor driver, partition 3, PROCESS_LOCAL, 7838 bytes)
+19/12/08 11:08:05 INFO TaskSetManager: Starting task 3.0 in stage 4.0 (TID 5, localhost, executor driver, partition 4, PROCESS_LOCAL, 7838 bytes)
+19/12/08 11:08:05 INFO Executor: Running task 0.0 in stage 4.0 (TID 2)
+19/12/08 11:08:05 INFO Executor: Running task 3.0 in stage 4.0 (TID 5)
+19/12/08 11:08:05 INFO Executor: Running task 2.0 in stage 4.0 (TID 4)
+19/12/08 11:08:05 INFO Executor: Running task 1.0 in stage 4.0 (TID 3)
+19/12/08 11:08:05 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+19/12/08 11:08:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+19/12/08 11:08:05 INFO MemoryStore: Block rdd_4_1 stored as values in memory (estimated size 4.0 B, free 1928.9 MB)
+19/12/08 11:08:05 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+19/12/08 11:08:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+19/12/08 11:08:05 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+19/12/08 11:08:05 INFO BlockManagerInfo: Added rdd_4_1 in memory on lenovo.corp.company.com:59658 (size: 4.0 B, free: 1929.0 MB)
+19/12/08 11:08:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+19/12/08 11:08:05 INFO MemoryStore: Block rdd_4_4 stored as values in memory (estimated size 4.0 B, free 1928.9 MB)
+19/12/08 11:08:05 INFO MemoryStore: Block rdd_4_2 stored as values in memory (estimated size 4.0 B, free 1928.9 MB)
+19/12/08 11:08:05 INFO BlockManagerInfo: Added rdd_4_4 in memory on lenovo.corp.company.com:59658 (size: 4.0 B, free: 1929.0 MB)
+19/12/08 11:08:05 INFO Executor: Finished task 0.0 in stage 4.0 (TID 2). 1048 bytes result sent to driver
+19/12/08 11:08:05 INFO BlockManagerInfo: Added rdd_4_2 in memory on lenovo.corp.company.com:59658 (size: 4.0 B, free: 1929.0 MB)
+19/12/08 11:08:05 INFO Executor: Finished task 1.0 in stage 4.0 (TID 3). 1091 bytes result sent to driver
+19/12/08 11:08:05 INFO Executor: Finished task 3.0 in stage 4.0 (TID 5). 1091 bytes result sent to driver
+19/12/08 11:08:05 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+19/12/08 11:08:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+19/12/08 11:08:05 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 2) in 24 ms on localhost (executor driver) (1/4)
+19/12/08 11:08:05 INFO MemoryStore: Block rdd_4_3 stored as values in memory (estimated size 4.0 B, free 1928.9 MB)
+19/12/08 11:08:05 INFO BlockManagerInfo: Added rdd_4_3 in memory on lenovo.corp.company.com:59658 (size: 4.0 B, free: 1929.0 MB)
+19/12/08 11:08:05 INFO Executor: Finished task 2.0 in stage 4.0 (TID 4). 1048 bytes result sent to driver
+19/12/08 11:08:05 INFO TaskSetManager: Finished task 2.0 in stage 4.0 (TID 4) in 29 ms on localhost (executor driver) (2/4)
+19/12/08 11:08:05 INFO TaskSetManager: Finished task 3.0 in stage 4.0 (TID 5) in 29 ms on localhost (executor driver) (3/4)
+19/12/08 11:08:05 INFO TaskSetManager: Finished task 1.0 in stage 4.0 (TID 3) in 31 ms on localhost (executor driver) (4/4)
+19/12/08 11:08:05 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+19/12/08 11:08:05 INFO DAGScheduler: ResultStage 4 (print at DStream03WindowAggregation.java:34) finished in 0.048 s
+19/12/08 11:08:05 INFO DAGScheduler: Job 2 finished: print at DStream03WindowAggregation.java:34, took 0.054912 s
+19/12/08 11:08:05 INFO SparkContext: Starting job: print at DStream03WindowAggregation.java:34
+19/12/08 11:08:05 INFO DAGScheduler: Got job 3 (print at DStream03WindowAggregation.java:34) with 3 output partitions
+19/12/08 11:08:05 INFO DAGScheduler: Final stage: ResultStage 6 (print at DStream03WindowAggregation.java:34)
+19/12/08 11:08:05 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 5)
+19/12/08 11:08:05 INFO DAGScheduler: Missing parents: List()
+19/12/08 11:08:05 INFO DAGScheduler: Submitting ResultStage 6 (MapPartitionsRDD[6] at reduceByKeyAndWindow at DStream03WindowAggregation.java:32), which has no missing parents
+19/12/08 11:08:05 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 4.9 KB, free 1928.9 MB)
+19/12/08 11:08:05 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 2.8 KB, free 1928.9 MB)
+19/12/08 11:08:05 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on lenovo.corp.company.com:59658 (size: 2.8 KB, free: 1929.0 MB)
+19/12/08 11:08:05 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1161
+19/12/08 11:08:05 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 6 (MapPartitionsRDD[6] at reduceByKeyAndWindow at DStream03WindowAggregation.java:32) (first 15 tasks are for partitions Vector(5, 6, 7))
+19/12/08 11:08:05 INFO TaskSchedulerImpl: Adding task set 6.0 with 3 tasks
+19/12/08 11:08:05 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 6, localhost, executor driver, partition 5, PROCESS_LOCAL, 7838 bytes)
+19/12/08 11:08:05 INFO TaskSetManager: Starting task 1.0 in stage 6.0 (TID 7, localhost, executor driver, partition 6, PROCESS_LOCAL, 7838 bytes)
+19/12/08 11:08:05 INFO TaskSetManager: Starting task 2.0 in stage 6.0 (TID 8, localhost, executor driver, partition 7, PROCESS_LOCAL, 7838 bytes)
+19/12/08 11:08:05 INFO Executor: Running task 0.0 in stage 6.0 (TID 6)
+19/12/08 11:08:05 INFO Executor: Running task 2.0 in stage 6.0 (TID 8)
+19/12/08 11:08:05 INFO Executor: Running task 1.0 in stage 6.0 (TID 7)
+19/12/08 11:08:05 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+19/12/08 11:08:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+19/12/08 11:08:05 INFO MemoryStore: Block rdd_4_5 stored as values in memory (estimated size 4.0 B, free 1928.9 MB)
+19/12/08 11:08:05 INFO BlockManagerInfo: Added rdd_4_5 in memory on lenovo.corp.company.com:59658 (size: 4.0 B, free: 1929.0 MB)
+19/12/08 11:08:05 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+19/12/08 11:08:05 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+19/12/08 11:08:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+19/12/08 11:08:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+19/12/08 11:08:05 INFO Executor: Finished task 0.0 in stage 6.0 (TID 6). 1091 bytes result sent to driver
+19/12/08 11:08:05 INFO MemoryStore: Block rdd_4_6 stored as values in memory (estimated size 4.0 B, free 1928.9 MB)
+19/12/08 11:08:05 INFO MemoryStore: Block rdd_4_7 stored as values in memory (estimated size 4.0 B, free 1928.9 MB)
+19/12/08 11:08:05 INFO BlockManagerInfo: Added rdd_4_6 in memory on lenovo.corp.company.com:59658 (size: 4.0 B, free: 1929.0 MB)
+19/12/08 11:08:05 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 6) in 16 ms on localhost (executor driver) (1/3)
+19/12/08 11:08:05 INFO BlockManagerInfo: Added rdd_4_7 in memory on lenovo.corp.company.com:59658 (size: 4.0 B, free: 1929.0 MB)
+19/12/08 11:08:05 INFO Executor: Finished task 1.0 in stage 6.0 (TID 7). 1048 bytes result sent to driver
+19/12/08 11:08:05 INFO Executor: Finished task 2.0 in stage 6.0 (TID 8). 1091 bytes result sent to driver
+19/12/08 11:08:05 INFO TaskSetManager: Finished task 1.0 in stage 6.0 (TID 7) in 19 ms on localhost (executor driver) (2/3)
+19/12/08 11:08:05 INFO TaskSetManager: Finished task 2.0 in stage 6.0 (TID 8) in 20 ms on localhost (executor driver) (3/3)
+19/12/08 11:08:05 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+19/12/08 11:08:05 INFO DAGScheduler: ResultStage 6 (print at DStream03WindowAggregation.java:34) finished in 0.031 s
+19/12/08 11:08:05 INFO DAGScheduler: Job 3 finished: print at DStream03WindowAggregation.java:34, took 0.035992 s
+-------------------------------------------
+Time: 1575783485000 ms
+-------------------------------------------
+
+19/12/08 11:08:05 INFO JobScheduler: Finished job streaming job 1575783485000 ms.0 from job set of time 1575783485000 ms
+19/12/08 11:08:05 INFO JobScheduler: Total delay: 0.618 s for time 1575783485000 ms (execution: 0.430 s)
+19/12/08 11:08:05 INFO ReceivedBlockTracker: Deleting batches: 
+19/12/08 11:08:05 INFO InputInfoTracker: remove old batch metadata: 
+19/12/08 11:08:06 INFO MemoryStore: Block input-0-1575783486400 stored as values in memory (estimated size 306.0 B, free 1928.9 MB)
+19/12/08 11:08:06 INFO BlockManagerInfo: Added input-0-1575783486400 in memory on lenovo.corp.company.com:59658 (size: 306.0 B, free: 1929.0 MB)
+19/12/08 11:08:06 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+19/12/08 11:08:06 WARN BlockManager: Block input-0-1575783486400 replicated to only 0 peer(s) instead of 1 peers
+19/12/08 11:08:06 INFO BlockGenerator: Pushed block input-0-1575783486400
+19/12/08 11:08:07 INFO MemoryStore: Block input-0-1575783487000 stored as values in memory (estimated size 331.0 B, free 1928.9 MB)
+19/12/08 11:08:07 INFO BlockManagerInfo: Added input-0-1575783487000 in memory on lenovo.corp.company.com:59658 (size: 331.0 B, free: 1929.0 MB)
+19/12/08 11:08:07 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+19/12/08 11:08:07 WARN BlockManager: Block input-0-1575783487000 replicated to only 0 peer(s) instead of 1 peers
+19/12/08 11:08:07 INFO BlockGenerator: Pushed block input-0-1575783487000
+19/12/08 11:08:07 INFO MemoryStore: Block input-0-1575783487400 stored as values in memory (estimated size 329.0 B, free 1928.9 MB)
+19/12/08 11:08:07 INFO BlockManagerInfo: Added input-0-1575783487400 in memory on lenovo.corp.company.com:59658 (size: 329.0 B, free: 1929.0 MB)
+19/12/08 11:08:07 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+19/12/08 11:08:07 WARN BlockManager: Block input-0-1575783487400 replicated to only 0 peer(s) instead of 1 peers
+19/12/08 11:08:07 INFO BlockGenerator: Pushed block input-0-1575783487400
+19/12/08 11:08:08 INFO MemoryStore: Block input-0-1575783488000 stored as values in memory (estimated size 318.0 B, free 1928.9 MB)
+19/12/08 11:08:08 INFO BlockManagerInfo: Added input-0-1575783488000 in memory on lenovo.corp.company.com:59658 (size: 318.0 B, free: 1929.0 MB)
+19/12/08 11:08:08 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+19/12/08 11:08:08 WARN BlockManager: Block input-0-1575783488000 replicated to only 0 peer(s) instead of 1 peers
+19/12/08 11:08:08 INFO BlockGenerator: Pushed block input-0-1575783488000
+19/12/08 11:08:08 INFO MemoryStore: Block input-0-1575783488600 stored as values in memory (estimated size 308.0 B, free 1928.9 MB)
+19/12/08 11:08:08 INFO BlockManagerInfo: Added input-0-1575783488600 in memory on lenovo.corp.company.com:59658 (size: 308.0 B, free: 1929.0 MB)
+19/12/08 11:08:08 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+19/12/08 11:08:08 WARN BlockManager: Block input-0-1575783488600 replicated to only 0 peer(s) instead of 1 peers
+19/12/08 11:08:08 INFO BlockGenerator: Pushed block input-0-1575783488600
+19/12/08 11:08:09 INFO MemoryStore: Block input-0-1575783489000 stored as values in memory (estimated size 294.0 B, free 1928.9 MB)
+19/12/08 11:08:09 INFO BlockManagerInfo: Added input-0-1575783489000 in memory on lenovo.corp.company.com:59658 (size: 294.0 B, free: 1929.0 MB)
+19/12/08 11:08:09 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+19/12/08 11:08:09 WARN BlockManager: Block input-0-1575783489000 replicated to only 0 peer(s) instead of 1 peers
+19/12/08 11:08:09 INFO BlockGenerator: Pushed block input-0-1575783489000
+19/12/08 11:08:09 INFO MemoryStore: Block input-0-1575783489600 stored as values in memory (estimated size 316.0 B, free 1928.9 MB)
+19/12/08 11:08:09 INFO BlockManagerInfo: Added input-0-1575783489600 in memory on lenovo.corp.company.com:59658 (size: 316.0 B, free: 1929.0 MB)
+19/12/08 11:08:09 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+19/12/08 11:08:09 WARN BlockManager: Block input-0-1575783489600 replicated to only 0 peer(s) instead of 1 peers
+19/12/08 11:08:09 INFO BlockGenerator: Pushed block input-0-1575783489600
+19/12/08 11:08:10 INFO ShuffledDStream: Slicing from 1575783465000 ms to 1575783490000 ms (aligned to 1575783465000 ms and 1575783490000 ms)
+19/12/08 11:08:10 INFO ShuffledDStream: Time 1575783480000 ms is invalid as zeroTime is 1575783480000 ms , slideDuration is 5000 ms and difference is 0 ms
+19/12/08 11:08:10 INFO JobScheduler: Added jobs for time 1575783490000 ms
+19/12/08 11:08:10 INFO JobScheduler: Starting job streaming job 1575783490000 ms.0 from job set of time 1575783490000 ms
+19/12/08 11:08:10 INFO SparkContext: Starting job: print at DStream03WindowAggregation.java:34
+19/12/08 11:08:10 INFO DAGScheduler: Registering RDD 9 (mapToPair at DStream03WindowAggregation.java:31)
+19/12/08 11:08:10 INFO DAGScheduler: Got job 4 (print at DStream03WindowAggregation.java:34) with 1 output partitions
+19/12/08 11:08:10 INFO DAGScheduler: Final stage: ResultStage 9 (print at DStream03WindowAggregation.java:34)
+19/12/08 11:08:10 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 7, ShuffleMapStage 8)
+19/12/08 11:08:10 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 7)
+19/12/08 11:08:10 INFO DAGScheduler: Submitting ShuffleMapStage 7 (MapPartitionsRDD[9] at mapToPair at DStream03WindowAggregation.java:31), which has no missing parents
+19/12/08 11:08:10 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 4.4 KB, free 1928.9 MB)
+19/12/08 11:08:10 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 2.5 KB, free 1928.9 MB)
+19/12/08 11:08:10 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on lenovo.corp.company.com:59658 (size: 2.5 KB, free: 1929.0 MB)
+19/12/08 11:08:10 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1161
+19/12/08 11:08:10 INFO DAGScheduler: Submitting 7 missing tasks from ShuffleMapStage 7 (MapPartitionsRDD[9] at mapToPair at DStream03WindowAggregation.java:31) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6))
+19/12/08 11:08:10 INFO TaskSchedulerImpl: Adding task set 7.0 with 7 tasks
+19/12/08 11:08:10 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 9, localhost, executor driver, partition 0, PROCESS_LOCAL, 7774 bytes)
+19/12/08 11:08:10 INFO TaskSetManager: Starting task 1.0 in stage 7.0 (TID 10, localhost, executor driver, partition 1, PROCESS_LOCAL, 7774 bytes)
+19/12/08 11:08:10 INFO TaskSetManager: Starting task 2.0 in stage 7.0 (TID 11, localhost, executor driver, partition 2, PROCESS_LOCAL, 7774 bytes)
+19/12/08 11:08:10 INFO TaskSetManager: Starting task 3.0 in stage 7.0 (TID 12, localhost, executor driver, partition 3, PROCESS_LOCAL, 7774 bytes)
+19/12/08 11:08:10 INFO TaskSetManager: Starting task 4.0 in stage 7.0 (TID 13, localhost, executor driver, partition 4, PROCESS_LOCAL, 7774 bytes)
+19/12/08 11:08:10 INFO TaskSetManager: Starting task 5.0 in stage 7.0 (TID 14, localhost, executor driver, partition 5, PROCESS_LOCAL, 7774 bytes)
+19/12/08 11:08:10 INFO TaskSetManager: Starting task 6.0 in stage 7.0 (TID 15, localhost, executor driver, partition 6, PROCESS_LOCAL, 7774 bytes)
+19/12/08 11:08:10 INFO Executor: Running task 0.0 in stage 7.0 (TID 9)
+19/12/08 11:08:10 INFO Executor: Running task 1.0 in stage 7.0 (TID 10)
+19/12/08 11:08:10 INFO Executor: Running task 3.0 in stage 7.0 (TID 12)
+19/12/08 11:08:10 INFO Executor: Running task 2.0 in stage 7.0 (TID 11)
+19/12/08 11:08:10 INFO Executor: Running task 4.0 in stage 7.0 (TID 13)
+19/12/08 11:08:10 INFO Executor: Running task 5.0 in stage 7.0 (TID 14)
+19/12/08 11:08:10 INFO Executor: Running task 6.0 in stage 7.0 (TID 15)
+19/12/08 11:08:10 INFO BlockManager: Found block input-0-1575783489600 locally
+19/12/08 11:08:10 INFO BlockManager: Found block input-0-1575783488000 locally
+19/12/08 11:08:10 INFO BlockManager: Found block input-0-1575783489000 locally
+19/12/08 11:08:10 INFO BlockManager: Found block input-0-1575783487400 locally
+19/12/08 11:08:10 INFO BlockManager: Found block input-0-1575783488600 locally
+19/12/08 11:08:10 INFO BlockManager: Found block input-0-1575783486400 locally
+19/12/08 11:08:10 INFO BlockManager: Found block input-0-1575783487000 locally
+19/12/08 11:08:10 INFO Executor: Finished task 5.0 in stage 7.0 (TID 14). 1047 bytes result sent to driver
+19/12/08 11:08:10 INFO TaskSetManager: Finished task 5.0 in stage 7.0 (TID 14) in 78 ms on localhost (executor driver) (1/7)
+19/12/08 11:08:10 INFO Executor: Finished task 0.0 in stage 7.0 (TID 9). 1004 bytes result sent to driver
+19/12/08 11:08:10 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 9) in 85 ms on localhost (executor driver) (2/7)
+19/12/08 11:08:10 INFO Executor: Finished task 6.0 in stage 7.0 (TID 15). 1004 bytes result sent to driver
+19/12/08 11:08:10 INFO TaskSetManager: Finished task 6.0 in stage 7.0 (TID 15) in 89 ms on localhost (executor driver) (3/7)
+19/12/08 11:08:10 INFO Executor: Finished task 2.0 in stage 7.0 (TID 11). 1004 bytes result sent to driver
+19/12/08 11:08:10 INFO TaskSetManager: Finished task 2.0 in stage 7.0 (TID 11) in 98 ms on localhost (executor driver) (4/7)
+19/12/08 11:08:10 INFO Executor: Finished task 4.0 in stage 7.0 (TID 13). 1004 bytes result sent to driver
+19/12/08 11:08:10 INFO TaskSetManager: Finished task 4.0 in stage 7.0 (TID 13) in 106 ms on localhost (executor driver) (5/7)
+19/12/08 11:08:10 INFO Executor: Finished task 1.0 in stage 7.0 (TID 10). 1004 bytes result sent to driver
+19/12/08 11:08:10 INFO TaskSetManager: Finished task 1.0 in stage 7.0 (TID 10) in 115 ms on localhost (executor driver) (6/7)
+19/12/08 11:08:10 INFO Executor: Finished task 3.0 in stage 7.0 (TID 12). 1004 bytes result sent to driver
+19/12/08 11:08:10 INFO TaskSetManager: Finished task 3.0 in stage 7.0 (TID 12) in 122 ms on localhost (executor driver) (7/7)
+19/12/08 11:08:10 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+19/12/08 11:08:10 INFO DAGScheduler: ShuffleMapStage 7 (mapToPair at DStream03WindowAggregation.java:31) finished in 0.136 s
+19/12/08 11:08:10 INFO DAGScheduler: looking for newly runnable stages
+19/12/08 11:08:10 INFO DAGScheduler: running: Set(ResultStage 0)
+19/12/08 11:08:10 INFO DAGScheduler: waiting: Set(ResultStage 9)
+19/12/08 11:08:10 INFO DAGScheduler: failed: Set()
+19/12/08 11:08:10 INFO DAGScheduler: Submitting ResultStage 9 (MapPartitionsRDD[12] at reduceByKeyAndWindow at DStream03WindowAggregation.java:32), which has no missing parents
+19/12/08 11:08:10 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 5.1 KB, free 1928.9 MB)
+19/12/08 11:08:10 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 2.9 KB, free 1928.9 MB)
+19/12/08 11:08:10 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on lenovo.corp.company.com:59658 (size: 2.9 KB, free: 1929.0 MB)
+19/12/08 11:08:10 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1161
+19/12/08 11:08:10 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 9 (MapPartitionsRDD[12] at reduceByKeyAndWindow at DStream03WindowAggregation.java:32) (first 15 tasks are for partitions Vector(0))
+19/12/08 11:08:10 INFO TaskSchedulerImpl: Adding task set 9.0 with 1 tasks
+19/12/08 11:08:10 INFO TaskSetManager: Starting task 0.0 in stage 9.0 (TID 16, localhost, executor driver, partition 0, ANY, 7852 bytes)
+19/12/08 11:08:10 INFO Executor: Running task 0.0 in stage 9.0 (TID 16)
+19/12/08 11:08:10 INFO BlockManager: Found block rdd_4_0 locally
+19/12/08 11:08:10 INFO MemoryStore: Block input-0-1575783490000 stored as values in memory (estimated size 313.0 B, free 1928.9 MB)
+19/12/08 11:08:10 INFO BlockManagerInfo: Added input-0-1575783490000 in memory on lenovo.corp.company.com:59658 (size: 313.0 B, free: 1929.0 MB)
+19/12/08 11:08:10 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+19/12/08 11:08:10 WARN BlockManager: Block input-0-1575783490000 replicated to only 0 peer(s) instead of 1 peers
+19/12/08 11:08:10 INFO BlockGenerator: Pushed block input-0-1575783490000
+19/12/08 11:08:10 INFO ShuffleBlockFetcherIterator: Getting 3 non-empty blocks including 3 local blocks and 0 remote blocks
+19/12/08 11:08:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+19/12/08 11:08:10 INFO MemoryStore: Block rdd_10_0 stored as values in memory (estimated size 157.0 B, free 1928.9 MB)
+19/12/08 11:08:10 INFO BlockManagerInfo: Added rdd_10_0 in memory on lenovo.corp.company.com:59658 (size: 157.0 B, free: 1929.0 MB)
+19/12/08 11:08:10 INFO Executor: Finished task 0.0 in stage 9.0 (TID 16). 1330 bytes result sent to driver
+19/12/08 11:08:10 INFO TaskSetManager: Finished task 0.0 in stage 9.0 (TID 16) in 25 ms on localhost (executor driver) (1/1)
+19/12/08 11:08:10 INFO TaskSchedulerImpl: Removed TaskSet 9.0, whose tasks have all completed, from pool 
+19/12/08 11:08:10 INFO DAGScheduler: ResultStage 9 (print at DStream03WindowAggregation.java:34) finished in 0.037 s
+19/12/08 11:08:10 INFO DAGScheduler: Job 4 finished: print at DStream03WindowAggregation.java:34, took 0.192607 s
+19/12/08 11:08:10 INFO SparkContext: Starting job: print at DStream03WindowAggregation.java:34
+19/12/08 11:08:10 INFO DAGScheduler: Got job 5 (print at DStream03WindowAggregation.java:34) with 4 output partitions
+19/12/08 11:08:10 INFO DAGScheduler: Final stage: ResultStage 12 (print at DStream03WindowAggregation.java:34)
+19/12/08 11:08:10 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 10, ShuffleMapStage 11)
+19/12/08 11:08:10 INFO DAGScheduler: Missing parents: List()
+19/12/08 11:08:10 INFO DAGScheduler: Submitting ResultStage 12 (MapPartitionsRDD[12] at reduceByKeyAndWindow at DStream03WindowAggregation.java:32), which has no missing parents
+19/12/08 11:08:10 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 5.1 KB, free 1928.9 MB)
+19/12/08 11:08:10 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 2.9 KB, free 1928.9 MB)
+19/12/08 11:08:10 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on lenovo.corp.company.com:59658 (size: 2.9 KB, free: 1929.0 MB)
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 52
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 54
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 60
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 49
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 71
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 83
+19/12/08 11:08:10 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1161
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 76
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 70
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 58
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 124
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 147
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 129
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 30
+19/12/08 11:08:10 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 12 (MapPartitionsRDD[12] at reduceByKeyAndWindow at DStream03WindowAggregation.java:32) (first 15 tasks are for partitions Vector(1, 2, 3, 4))
+19/12/08 11:08:10 INFO TaskSchedulerImpl: Adding task set 12.0 with 4 tasks
+19/12/08 11:08:10 INFO TaskSetManager: Starting task 0.0 in stage 12.0 (TID 17, localhost, executor driver, partition 1, ANY, 7852 bytes)
+19/12/08 11:08:10 INFO TaskSetManager: Starting task 1.0 in stage 12.0 (TID 18, localhost, executor driver, partition 2, ANY, 7852 bytes)
+19/12/08 11:08:10 INFO TaskSetManager: Starting task 2.0 in stage 12.0 (TID 19, localhost, executor driver, partition 3, ANY, 7852 bytes)
+19/12/08 11:08:10 INFO TaskSetManager: Starting task 3.0 in stage 12.0 (TID 20, localhost, executor driver, partition 4, ANY, 7852 bytes)
+19/12/08 11:08:10 INFO Executor: Running task 0.0 in stage 12.0 (TID 17)
+19/12/08 11:08:10 INFO Executor: Running task 2.0 in stage 12.0 (TID 19)
+19/12/08 11:08:10 INFO Executor: Running task 1.0 in stage 12.0 (TID 18)
+19/12/08 11:08:10 INFO Executor: Running task 3.0 in stage 12.0 (TID 20)
+19/12/08 11:08:10 INFO BlockManager: Found block rdd_4_2 locally
+19/12/08 11:08:10 INFO BlockManager: Found block rdd_4_4 locally
+19/12/08 11:08:10 INFO BlockManager: Found block rdd_4_3 locally
+19/12/08 11:08:10 INFO BlockManager: Found block rdd_4_1 locally
+19/12/08 11:08:10 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 2 local blocks and 0 remote blocks
+19/12/08 11:08:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+19/12/08 11:08:10 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+19/12/08 11:08:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+19/12/08 11:08:10 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+19/12/08 11:08:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+19/12/08 11:08:10 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+19/12/08 11:08:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+19/12/08 11:08:10 INFO MemoryStore: Block rdd_10_1 stored as values in memory (estimated size 4.0 B, free 1928.9 MB)
+19/12/08 11:08:10 INFO MemoryStore: Block rdd_10_3 stored as values in memory (estimated size 4.0 B, free 1928.9 MB)
+19/12/08 11:08:10 INFO BlockManagerInfo: Added rdd_10_1 in memory on lenovo.corp.company.com:59658 (size: 4.0 B, free: 1929.0 MB)
+19/12/08 11:08:10 INFO BlockManagerInfo: Added rdd_10_3 in memory on lenovo.corp.company.com:59658 (size: 4.0 B, free: 1929.0 MB)
+19/12/08 11:08:10 INFO MemoryStore: Block rdd_10_4 stored as values in memory (estimated size 159.0 B, free 1928.9 MB)
+19/12/08 11:08:10 INFO MemoryStore: Block rdd_10_2 stored as values in memory (estimated size 163.0 B, free 1928.9 MB)
+19/12/08 11:08:10 INFO Executor: Finished task 0.0 in stage 12.0 (TID 17). 1091 bytes result sent to driver
+19/12/08 11:08:10 INFO BlockManagerInfo: Added rdd_10_4 in memory on lenovo.corp.company.com:59658 (size: 159.0 B, free: 1929.0 MB)
+19/12/08 11:08:10 INFO Executor: Finished task 2.0 in stage 12.0 (TID 19). 1091 bytes result sent to driver
+19/12/08 11:08:10 INFO BlockManagerInfo: Added rdd_10_2 in memory on lenovo.corp.company.com:59658 (size: 163.0 B, free: 1929.0 MB)
+19/12/08 11:08:10 INFO TaskSetManager: Finished task 0.0 in stage 12.0 (TID 17) in 13 ms on localhost (executor driver) (1/4)
+19/12/08 11:08:10 INFO Executor: Finished task 3.0 in stage 12.0 (TID 20). 1246 bytes result sent to driver
+19/12/08 11:08:10 INFO Executor: Finished task 1.0 in stage 12.0 (TID 18). 1250 bytes result sent to driver
+19/12/08 11:08:10 INFO TaskSetManager: Finished task 2.0 in stage 12.0 (TID 19) in 15 ms on localhost (executor driver) (2/4)
+19/12/08 11:08:10 INFO TaskSetManager: Finished task 1.0 in stage 12.0 (TID 18) in 16 ms on localhost (executor driver) (3/4)
+19/12/08 11:08:10 INFO TaskSetManager: Finished task 3.0 in stage 12.0 (TID 20) in 16 ms on localhost (executor driver) (4/4)
+19/12/08 11:08:10 INFO TaskSchedulerImpl: Removed TaskSet 12.0, whose tasks have all completed, from pool 
+19/12/08 11:08:10 INFO DAGScheduler: ResultStage 12 (print at DStream03WindowAggregation.java:34) finished in 0.037 s
+19/12/08 11:08:10 INFO DAGScheduler: Job 5 finished: print at DStream03WindowAggregation.java:34, took 0.041790 s
+19/12/08 11:08:10 INFO BlockManagerInfo: Removed broadcast_1_piece0 on lenovo.corp.company.com:59658 in memory (size: 2.8 KB, free: 1929.0 MB)
+19/12/08 11:08:10 INFO SparkContext: Starting job: print at DStream03WindowAggregation.java:34
+19/12/08 11:08:10 INFO DAGScheduler: Got job 6 (print at DStream03WindowAggregation.java:34) with 3 output partitions
+19/12/08 11:08:10 INFO DAGScheduler: Final stage: ResultStage 15 (print at DStream03WindowAggregation.java:34)
+19/12/08 11:08:10 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 13, ShuffleMapStage 14)
+19/12/08 11:08:10 INFO DAGScheduler: Missing parents: List()
+19/12/08 11:08:10 INFO DAGScheduler: Submitting ResultStage 15 (MapPartitionsRDD[12] at reduceByKeyAndWindow at DStream03WindowAggregation.java:32), which has no missing parents
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 79
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 100
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 146
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 121
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 128
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 96
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 133
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 48
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 99
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 61
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 111
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 149
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 67
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 65
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 106
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 51
+19/12/08 11:08:10 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 5.1 KB, free 1928.9 MB)
+19/12/08 11:08:10 INFO BlockManagerInfo: Removed broadcast_3_piece0 on lenovo.corp.company.com:59658 in memory (size: 2.8 KB, free: 1929.0 MB)
+19/12/08 11:08:10 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 2.9 KB, free 1928.9 MB)
+19/12/08 11:08:10 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on lenovo.corp.company.com:59658 (size: 2.9 KB, free: 1929.0 MB)
+19/12/08 11:08:10 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1161
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 57
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 136
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 78
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 80
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 45
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 94
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 125
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 32
+19/12/08 11:08:10 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 15 (MapPartitionsRDD[12] at reduceByKeyAndWindow at DStream03WindowAggregation.java:32) (first 15 tasks are for partitions Vector(5, 6, 7))
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 25
+19/12/08 11:08:10 INFO TaskSchedulerImpl: Adding task set 15.0 with 3 tasks
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 33
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 53
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 38
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 122
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 139
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 68
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 42
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 50
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 34
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 86
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 105
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 36
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 72
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 29
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 127
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 143
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 119
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 91
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 56
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 92
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 98
+19/12/08 11:08:10 INFO TaskSetManager: Starting task 0.0 in stage 15.0 (TID 21, localhost, executor driver, partition 5, ANY, 7852 bytes)
+19/12/08 11:08:10 INFO TaskSetManager: Starting task 1.0 in stage 15.0 (TID 22, localhost, executor driver, partition 6, ANY, 7852 bytes)
+19/12/08 11:08:10 INFO TaskSetManager: Starting task 2.0 in stage 15.0 (TID 23, localhost, executor driver, partition 7, ANY, 7852 bytes)
+19/12/08 11:08:10 INFO Executor: Running task 2.0 in stage 15.0 (TID 23)
+19/12/08 11:08:10 INFO Executor: Running task 0.0 in stage 15.0 (TID 21)
+19/12/08 11:08:10 INFO Executor: Running task 1.0 in stage 15.0 (TID 22)
+19/12/08 11:08:10 INFO BlockManager: Found block rdd_4_7 locally
+19/12/08 11:08:10 INFO BlockManager: Found block rdd_4_6 locally
+19/12/08 11:08:10 INFO BlockManager: Found block rdd_4_5 locally
+19/12/08 11:08:10 INFO BlockManagerInfo: Removed broadcast_5_piece0 on lenovo.corp.company.com:59658 in memory (size: 2.9 KB, free: 1929.0 MB)
+19/12/08 11:08:10 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+19/12/08 11:08:10 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+19/12/08 11:08:10 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+19/12/08 11:08:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+19/12/08 11:08:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+19/12/08 11:08:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+19/12/08 11:08:10 INFO MemoryStore: Block rdd_10_6 stored as values in memory (estimated size 4.0 B, free 1928.9 MB)
+19/12/08 11:08:10 INFO MemoryStore: Block rdd_10_7 stored as values in memory (estimated size 4.0 B, free 1928.9 MB)
+19/12/08 11:08:10 INFO BlockManagerInfo: Added rdd_10_6 in memory on lenovo.corp.company.com:59658 (size: 4.0 B, free: 1929.0 MB)
+19/12/08 11:08:10 INFO BlockManagerInfo: Added rdd_10_7 in memory on lenovo.corp.company.com:59658 (size: 4.0 B, free: 1929.0 MB)
+19/12/08 11:08:10 INFO MemoryStore: Block rdd_10_5 stored as values in memory (estimated size 156.0 B, free 1928.9 MB)
+19/12/08 11:08:10 INFO BlockManagerInfo: Added rdd_10_5 in memory on lenovo.corp.company.com:59658 (size: 156.0 B, free: 1929.0 MB)
+19/12/08 11:08:10 INFO Executor: Finished task 1.0 in stage 15.0 (TID 22). 1134 bytes result sent to driver
+19/12/08 11:08:10 INFO Executor: Finished task 2.0 in stage 15.0 (TID 23). 1134 bytes result sent to driver
+19/12/08 11:08:10 INFO Executor: Finished task 0.0 in stage 15.0 (TID 21). 1286 bytes result sent to driver
+19/12/08 11:08:10 INFO TaskSetManager: Finished task 1.0 in stage 15.0 (TID 22) in 11 ms on localhost (executor driver) (1/3)
+19/12/08 11:08:10 INFO TaskSetManager: Finished task 0.0 in stage 15.0 (TID 21) in 11 ms on localhost (executor driver) (2/3)
+19/12/08 11:08:10 INFO TaskSetManager: Finished task 2.0 in stage 15.0 (TID 23) in 11 ms on localhost (executor driver) (3/3)
+19/12/08 11:08:10 INFO TaskSchedulerImpl: Removed TaskSet 15.0, whose tasks have all completed, from pool 
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 26
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 114
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 97
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 39
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 118
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 132
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 59
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 95
+19/12/08 11:08:10 INFO DAGScheduler: ResultStage 15 (print at DStream03WindowAggregation.java:34) finished in 0.021 s
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 101
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 102
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 55
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 89
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 73
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 140
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 103
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 135
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 116
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 64
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 37
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 69
+19/12/08 11:08:10 INFO DAGScheduler: Job 6 finished: print at DStream03WindowAggregation.java:34, took 0.025883 s
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 81
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 41
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 40
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 123
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 148
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 47
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 131
+-------------------------------------------
+Time: 1575783490000 ms
+-------------------------------------------
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 82
+(Chennai,3)
+(Visakhapatnam,1)
+(Hyderabad,2)
+(Mumbai,1)
+
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 75
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 113
+19/12/08 11:08:10 INFO JobScheduler: Finished job streaming job 1575783490000 ms.0 from job set of time 1575783490000 ms
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 104
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 134
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 84
+19/12/08 11:08:10 INFO JobScheduler: Total delay: 0.306 s for time 1575783490000 ms (execution: 0.284 s)
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 130
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 120
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 66
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 28
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 27
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 138
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 63
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 43
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 145
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 117
+19/12/08 11:08:10 INFO MapPartitionsRDD: Removing RDD 6 from persistence list
+19/12/08 11:08:10 INFO BlockManagerInfo: Removed broadcast_4_piece0 on lenovo.corp.company.com:59658 in memory (size: 2.5 KB, free: 1929.0 MB)
+19/12/08 11:08:10 INFO PartitionerAwareUnionRDD: Removing RDD 5 from persistence list
+19/12/08 11:08:10 INFO BlockManager: Removing RDD 6
+19/12/08 11:08:10 INFO ReceivedBlockTracker: Deleting batches: 
+19/12/08 11:08:10 INFO InputInfoTracker: remove old batch metadata: 
+19/12/08 11:08:10 INFO BlockManager: Removing RDD 5
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 35
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 108
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 126
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 144
+19/12/08 11:08:10 INFO BlockManagerInfo: Removed broadcast_2_piece0 on lenovo.corp.company.com:59658 in memory (size: 2.8 KB, free: 1929.0 MB)
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 62
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 74
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 107
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 46
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 110
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 141
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 31
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 90
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 115
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 85
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 87
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 88
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 93
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 142
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 44
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 137
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 112
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 77
+19/12/08 11:08:10 INFO ContextCleaner: Cleaned accumulator 109
+19/12/08 11:08:10 INFO MemoryStore: Block input-0-1575783490600 stored as values in memory (estimated size 315.0 B, free 1928.9 MB)
+19/12/08 11:08:10 INFO BlockManagerInfo: Added input-0-1575783490600 in memory on lenovo.corp.company.com:59658 (size: 315.0 B, free: 1929.0 MB)
+19/12/08 11:08:10 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+19/12/08 11:08:10 WARN BlockManager: Block input-0-1575783490600 replicated to only 0 peer(s) instead of 1 peers
+19/12/08 11:08:10 INFO BlockGenerator: Pushed block input-0-1575783490600
+19/12/08 11:08:11 INFO MemoryStore: Block input-0-1575783491200 stored as values in memory (estimated size 300.0 B, free 1928.9 MB)
+19/12/08 11:08:11 INFO BlockManagerInfo: Added input-0-1575783491200 in memory on lenovo.corp.company.com:59658 (size: 300.0 B, free: 1929.0 MB)
+19/12/08 11:08:11 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+19/12/08 11:08:11 WARN BlockManager: Block input-0-1575783491200 replicated to only 0 peer(s) instead of 1 peers
+19/12/08 11:08:11 INFO BlockGenerator: Pushed block input-0-1575783491200
+19/12/08 11:08:11 INFO MemoryStore: Block input-0-1575783491600 stored as values in memory (estimated size 323.0 B, free 1928.9 MB)
+19/12/08 11:08:11 INFO BlockManagerInfo: Added input-0-1575783491600 in memory on lenovo.corp.company.com:59658 (size: 323.0 B, free: 1929.0 MB)
+19/12/08 11:08:11 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+19/12/08 11:08:11 WARN BlockManager: Block input-0-1575783491600 replicated to only 0 peer(s) instead of 1 peers
+19/12/08 11:08:11 INFO BlockGenerator: Pushed block input-0-1575783491600
+19/12/08 11:08:12 INFO MemoryStore: Block input-0-1575783492200 stored as values in memory (estimated size 298.0 B, free 1928.9 MB)
+19/12/08 11:08:12 INFO BlockManagerInfo: Added input-0-1575783492200 in memory on lenovo.corp.company.com:59658 (size: 298.0 B, free: 1929.0 MB)
+19/12/08 11:08:12 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+19/12/08 11:08:12 WARN BlockManager: Block input-0-1575783492200 replicated to only 0 peer(s) instead of 1 peers
+19/12/08 11:08:12 INFO BlockGenerator: Pushed block input-0-1575783492200
+19/12/08 11:08:12 INFO MemoryStore: Block input-0-1575783492600 stored as values in memory (estimated size 307.0 B, free 1928.9 MB)
+19/12/08 11:08:12 INFO BlockManagerInfo: Added input-0-1575783492600 in memory on lenovo.corp.company.com:59658 (size: 307.0 B, free: 1929.0 MB)
+19/12/08 11:08:12 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+19/12/08 11:08:12 WARN BlockManager: Block input-0-1575783492600 replicated to only 0 peer(s) instead of 1 peers
+19/12/08 11:08:12 INFO BlockGenerator: Pushed block input-0-1575783492600
+19/12/08 11:08:13 INFO MemoryStore: Block input-0-1575783493200 stored as values in memory (estimated size 298.0 B, free 1928.9 MB)
+19/12/08 11:08:13 INFO BlockManagerInfo: Added input-0-1575783493200 in memory on lenovo.corp.company.com:59658 (size: 298.0 B, free: 1929.0 MB)
+19/12/08 11:08:13 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+19/12/08 11:08:13 WARN BlockManager: Block input-0-1575783493200 replicated to only 0 peer(s) instead of 1 peers
+19/12/08 11:08:13 INFO BlockGenerator: Pushed block input-0-1575783493200
