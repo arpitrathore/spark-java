@@ -1,4 +1,4 @@
-package org.arpit.spark.stream01.common;
+package org.arpit.spark.stream00.common;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.arpit.spark.common.util.Employee;
