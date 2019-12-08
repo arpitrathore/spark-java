@@ -1,10 +1,9 @@
 package org.arpit.spark.rdd01.basic;
 
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.arpit.spark.common.util.Employee;
+import org.arpit.spark.common.util.LoggerUtil;
 import scala.Tuple2;
 
 import java.util.List;
@@ -14,7 +13,7 @@ public class Rdd06PairRDDConcise {
     private static final String APP_NAME = Rdd06PairRDDConcise.class.getName();
 
     public static void main(String[] args) {
-        Logger.getLogger("org.apache").setLevel(Level.OFF);
+        LoggerUtil.disableSparkLogs();
 
         List<Employee> inputData = Employee.buildRandomEmployees(50);
 

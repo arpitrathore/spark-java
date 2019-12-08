@@ -1,11 +1,19 @@
 package org.arpit.spark.common.util;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.*;
 
 public class Employee implements Serializable {
+
+    @JsonIgnore
+    private static transient ObjectMapper OBJECT_MAPPER = new ObjectMapper();
+
     private String id;
     private String firstName;
     private String lastName;
@@ -18,6 +26,23 @@ public class Employee implements Serializable {
     private String jobTitle;
     private String city;
     private String country;
+
+    public static Employee fromJson(String employeeJson) {
+        try {
+            return OBJECT_MAPPER.readValue(employeeJson, Employee.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return new Employee();
+        }
+    }
+
+    public static String buildRandomEmployeeJson() {
+        try {
+            return OBJECT_MAPPER.writeValueAsString(buildRandomEmployees(1).get(0));
+        } catch (JsonProcessingException e) {
+            return "{}";
+        }
+    }
 
     public static Employee buildRandomEmployee() {
         return buildRandomEmployees(1).get(0);

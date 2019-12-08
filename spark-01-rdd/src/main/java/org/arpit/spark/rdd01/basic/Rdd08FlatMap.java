@@ -6,6 +6,7 @@ import org.apache.log4j.Logger;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
+import org.arpit.spark.common.util.LoggerUtil;
 
 import java.util.Arrays;
 import java.util.List;
@@ -15,7 +16,7 @@ public class Rdd08FlatMap {
     private static final String APP_NAME = Rdd08FlatMap.class.getName();
 
     public static void main(String[] args) {
-        Logger.getLogger("org.apache").setLevel(Level.OFF);
+        LoggerUtil.disableSparkLogs();
 
         List<String> inputData = ImmutableList.of("Hi! My name is arpit",
                 "",
