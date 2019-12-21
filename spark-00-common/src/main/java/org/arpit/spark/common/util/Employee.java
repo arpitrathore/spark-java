@@ -8,6 +8,7 @@ import com.github.javafaker.Faker;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 public class Employee implements Serializable {
 
@@ -58,7 +59,8 @@ public class Employee implements Serializable {
             employee.firstName = faker.name().firstName();
             employee.lastName = faker.name().lastName();
             employee.gender = faker.demographic().sex();
-            employee.doj = new Date();
+            employee.doj = faker.date().past(3650, TimeUnit.DAYS);
+            //employee.doj = new Date();
             employee.age = faker.number().numberBetween(18, 65);
             employee.email = faker.internet().emailAddress();
             employee.mobile = faker.phoneNumber().cellPhone();

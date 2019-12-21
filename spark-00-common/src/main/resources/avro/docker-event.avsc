@@ -1,0 +1,16 @@
+{
+     "type": "record",
+     "namespace": "org.arpit.spark.schema.avro",
+     "name": "DockerEventAvro",
+     "version": "1",
+     "fields": [
+	   {"name": "id", "type": "string"},
+       {"name": "status", "type": "string"},
+       {"name": "from", "type": "string"},
+       {"name": "Type", "type": "string"},
+       {"name": "Action", "type": "string"},
+       {"name": "scope", "type": "string"},
+       {"name": "timeMillis", "type": "long",  "logicalType": "timestamp-millis"},
+       {"name": "timeNano", "type": "string"}
+  ]
+}
