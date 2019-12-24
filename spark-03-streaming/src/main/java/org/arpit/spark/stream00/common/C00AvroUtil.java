@@ -1,4 +1,4 @@
-package org.arpit.spark.stream03.avro;
+package org.arpit.spark.stream00.common;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -11,7 +11,7 @@ import org.apache.spark.sql.types.StructType;
 import java.io.IOException;
 import java.net.URL;
 
-public class AvroUtil {
+public class C00AvroUtil {
 
     public static StructType buildDataFrameSchemaFromSchemaRegistrySchema(String schemaRegistryUrl,
                                                                           String kafkaTopic,

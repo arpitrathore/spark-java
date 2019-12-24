@@ -13,10 +13,10 @@ import java.util.Properties;
 /**
  * For Avro, use docker image rather than kafka/zookeeper binaries
  * Documentation : https://hub.docker.com/r/landoop/fast-data-dev
- * Docker command : docker run -d -p 2181:2181 -p 3030:3030 -p 8081-8083:8081-8083 -p 9581-9585:9581-9585 -p 9092:9092 -e ADV_HOST=localhost lensesio/fast-data-dev:2.2
+ * Docker command : docker run --restart always -d -p 2181:2181 -p 3030:3030 -p 8081-8083:8081-8083 -p 9581-9585:9581-9585 -p 9092:9092 -e ADV_HOST=localhost lensesio/fast-data-dev:2.2
  * Access UI : localhost:3030
  */
-public class C03KafkaAvroProducer {
+public class C03KafkaAvroProducerDockerEvents {
 
     private static int SLEEP_INTERVAL = 1500;
 

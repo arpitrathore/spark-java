@@ -20,7 +20,8 @@ import org.apache.spark.streaming.kafka010.ConsumerStrategy;
 import org.apache.spark.streaming.kafka010.KafkaUtils;
 import org.apache.spark.streaming.kafka010.LocationStrategies;
 import org.arpit.spark.common.util.LoggerUtil;
-import org.arpit.spark.stream00.common.C03KafkaAvroProducer;
+import org.arpit.spark.stream00.common.C00AvroUtil;
+import org.arpit.spark.stream00.common.C03KafkaAvroProducerDockerEvents;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -29,10 +30,10 @@ import java.util.Map;
 
 /**
  * Documentation : https://spark.apache.org/docs/2.4.0/streaming-kafka-0-10-integration.html
- * Run {@link C03KafkaAvroProducer} to produce random docker events in avro format
+ * Run {@link C03KafkaAvroProducerDockerEvents} to produce random docker events in avro format
  */
-public class Avro01KafkaToCsv {
-    private static final String APP_NAME = Avro01KafkaToCsv.class.getName();
+public class Avro02KafkaToCsvHdfs {
+    private static final String APP_NAME = Avro02KafkaToCsvHdfs.class.getName();
 
     public static void main(String[] args) throws Exception {
         LoggerUtil.disableSparkLogs();
@@ -46,9 +47,9 @@ public class Avro01KafkaToCsv {
                 KafkaUtils.createDirectStream(jssc, LocationStrategies.PreferConsistent(), buildConsumerStrategy());
 
 
-        final StructType structType = AvroUtil
-                .buildDataFrameSchemaFromSchemaRegistrySchema(C03KafkaAvroProducer.SCHEMA_REGISTRY,
-                        C03KafkaAvroProducer.KAFKA_TOPIC, 1);
+        final StructType structType = C00AvroUtil
+                .buildDataFrameSchemaFromSchemaRegistrySchema(C03KafkaAvroProducerDockerEvents.SCHEMA_REGISTRY,
+                        C03KafkaAvroProducerDockerEvents.KAFKA_TOPIC, 1);
         System.out.println("Struct type built from schema registry schema" + structType);
 
         kafkaDStream.foreachRDD(message -> {
@@ -56,8 +57,8 @@ public class Avro01KafkaToCsv {
             if (rows.count() > 0) {
                 Dataset<Row> df = sqlContext.read().schema(structType).json(rows);
                 df.show();
-                df.write().format("csv").mode(SaveMode.Append).save("docker-events-dir");
-                System.out.println("Data written to csv at : " + System.getProperty("user.dir") + "/docker-events-dir");
+                df.write().format("csv").mode(SaveMode.Append).save("hdfs://localhost:9000/docker-events-dir");
+                System.out.println("Data written to csv at : hdfs://localhost:9000/docker-events-dir");
             }
         });
 
@@ -67,8 +68,8 @@ public class Avro01KafkaToCsv {
 
     private static ConsumerStrategy<String, GenericData.Record> buildConsumerStrategy() {
         final Map<String, Object> kafkaParams = new HashMap<>();
-        kafkaParams.put("bootstrap.servers", C03KafkaAvroProducer.KAFKA_BROKERS);
-        kafkaParams.put("schema.registry.url", C03KafkaAvroProducer.SCHEMA_REGISTRY);
+        kafkaParams.put("bootstrap.servers", C03KafkaAvroProducerDockerEvents.KAFKA_BROKERS);
+        kafkaParams.put("schema.registry.url", C03KafkaAvroProducerDockerEvents.SCHEMA_REGISTRY);
 
         kafkaParams.put("key.deserializer", StringDeserializer.class);
         kafkaParams.put("value.deserializer", KafkaAvroDeserializer.class);
@@ -77,7 +78,7 @@ public class Avro01KafkaToCsv {
         kafkaParams.put("auto.offset.reset", "earliest");
         kafkaParams.put("enable.auto.commit", false);
 
-        final List<String> TOPIC_NAME = Arrays.asList(C03KafkaAvroProducer.KAFKA_TOPIC);
+        final List<String> TOPIC_NAME = Arrays.asList(C03KafkaAvroProducerDockerEvents.KAFKA_TOPIC);
         return ConsumerStrategies.<String, GenericData.Record>Subscribe(TOPIC_NAME, kafkaParams);
     }
 

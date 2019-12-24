@@ -1,0 +1,23 @@
+{
+     "type": "record",
+     "namespace": "org.arpit.spark.schema.avro",
+     "name": "TweetAvro",
+     "version": "1",
+     "fields": [
+	   {"name": "id", "type": "string"},
+       {"name": "timeMillis", "type": "long",  "logicalType": "timestamp-millis"},
+       {"name": "tweetText", "type": "string"},
+       {"name": "language", "type": "string"},
+       {"name": "favorited", "type": "boolean"},
+       {"name": "favoriteCount", "type": "long"},
+       {"name": "retweeted", "type": "boolean"},
+       {"name": "retweetCount", "type": "long"},
+       {"name": "replyCount", "type": "long"},
+       {"name": "possiblySensitive", "type": "boolean"},
+       {"name": "userId", "type": "string"},
+       {"name": "userScreenName", "type": "string"},
+       {"name": "userLocation", "type": "string"},
+       {"name": "userVerified", "type": "boolean"},
+       {"name": "userFollowerCount", "type": "long"}
+  ]
+}
