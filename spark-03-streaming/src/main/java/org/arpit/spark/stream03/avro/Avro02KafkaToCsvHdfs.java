@@ -57,8 +57,8 @@ public class Avro02KafkaToCsvHdfs {
             if (rows.count() > 0) {
                 Dataset<Row> df = sqlContext.read().schema(structType).json(rows);
                 df.show();
-                df.write().format("csv").mode(SaveMode.Append).save("hdfs://localhost:9000/docker-events-dir");
-                System.out.println("Data written to csv at : hdfs://localhost:9000/docker-events-dir");
+                df.write().format("csv").mode(SaveMode.Append).save("hdfs://localhost:9000/data/docker-events-dir");
+                System.out.println("Data written to csv at : hdfs://localhost:9000/data/docker-events-dir");
             }
         });
 

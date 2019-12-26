@@ -33,7 +33,7 @@ import java.util.Map;
  * Run {@link org.arpit.spark.stream00.common.C04KafkaAvroProducerTweets} to produce random pull tweets and push to kafka in avro format
  * Create hive table : "create table tweets(id string, timeMillis bigint, tweetText string, language string, favorited boolean,
  * favoriteCount bigint, retweeted boolean, retweetCount bigint, replyCount bigint, possiblySensitive boolean, userId string,
- * userScreenName string, userLocation string, userVerified boolean, userFollowerCount bigint);"
+ * userScreenName string, userLocation string, userVerified boolean, userFollowerCount bigint) STORED AS ORC TBLPROPERTIES("orc.compress" = "SNAPPY");"
  */
 public class Avro03KafkaToHiveOrcTweets {
     private static final String APP_NAME = Avro03KafkaToHiveOrcTweets.class.getName();
