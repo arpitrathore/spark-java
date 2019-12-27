@@ -35,8 +35,8 @@ import java.util.Map;
  * favoriteCount bigint, retweeted boolean, retweetCount bigint, replyCount bigint, possiblySensitive boolean, userId string,
  * userScreenName string, userLocation string, userVerified boolean, userFollowerCount bigint) STORED AS ORC TBLPROPERTIES("orc.compress" = "SNAPPY");"
  */
-public class Avro03KafkaToHiveOrcTweets {
-    private static final String APP_NAME = Avro03KafkaToHiveOrcTweets.class.getName();
+public class Avro04KafkaToHiveOrcTweets {
+    private static final String APP_NAME = Avro04KafkaToHiveOrcTweets.class.getName();
 
     public static void main(String[] args) throws Exception {
         LoggerUtil.disableSparkLogs();
