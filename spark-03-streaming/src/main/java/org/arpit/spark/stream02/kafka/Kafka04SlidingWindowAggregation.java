@@ -11,7 +11,8 @@ import org.apache.spark.streaming.kafka010.ConsumerStrategies;
 import org.apache.spark.streaming.kafka010.ConsumerStrategy;
 import org.apache.spark.streaming.kafka010.KafkaUtils;
 import org.apache.spark.streaming.kafka010.LocationStrategies;
-import org.arpit.spark.common.util.Employee;
+import org.arpit.spark.common.pojo.Employee;
+import org.arpit.spark.common.util.EmployeeUtil;
 import org.arpit.spark.common.util.LoggerUtil;
 import org.arpit.spark.stream00.common.C02KafkaJsonProducer;
 import scala.Tuple2;
@@ -40,7 +41,7 @@ public class Kafka04SlidingWindowAggregation {
                 KafkaUtils.createDirectStream(jssc, LocationStrategies.PreferConsistent(), buildConsumerStrategy());
 
         final JavaPairDStream<Long, String> employeeByCitySorted = kafkaDStream
-                .map(e -> Employee.fromJson(e.value()))
+                .map(e -> EmployeeUtil.fromJson(e.value()))
                 .mapToPair(e -> new Tuple2<>(e.getCity(), 1L))
                 //Batch duration 5s (while creating JavaStreamingContext), window duration 30s, slide duration 10s
                 .reduceByKeyAndWindow(((c1, c2) -> c1 + c2), Durations.seconds(30), Durations.seconds(10))

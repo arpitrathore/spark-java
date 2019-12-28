@@ -5,7 +5,8 @@ import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
-import org.arpit.spark.common.util.Employee;
+import org.arpit.spark.common.pojo.Employee;
+import org.arpit.spark.common.util.EmployeeUtil;
 
 import java.util.Properties;
 
@@ -25,7 +26,7 @@ public class C02KafkaJsonProducer {
 
         Producer<String, String> producer = new KafkaProducer<>(properties);
         while (true) {
-            String employeeJson = Employee.buildRandomEmployeeJson();
+            String employeeJson = EmployeeUtil.buildRandomEmployeeJson();
             System.out.println(employeeJson);
 
             ProducerRecord<String, String> producerRecord = new ProducerRecord<>(

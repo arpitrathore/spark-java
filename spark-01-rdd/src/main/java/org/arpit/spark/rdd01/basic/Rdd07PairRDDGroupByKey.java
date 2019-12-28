@@ -3,7 +3,8 @@ package org.arpit.spark.rdd01.basic;
 import com.google.common.collect.Iterables;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaSparkContext;
-import org.arpit.spark.common.util.Employee;
+import org.arpit.spark.common.pojo.Employee;
+import org.arpit.spark.common.util.EmployeeUtil;
 import org.arpit.spark.common.util.LoggerUtil;
 import scala.Tuple2;
 
@@ -16,7 +17,7 @@ public class Rdd07PairRDDGroupByKey {
     public static void main(String[] args) {
         LoggerUtil.disableSparkLogs();
 
-        List<Employee> inputData = Employee.buildRandomEmployees(50);
+        List<Employee> inputData = EmployeeUtil.buildRandomEmployees(50);
 
         SparkConf conf = new SparkConf().setAppName(APP_NAME).setMaster("local[*]");
         JavaSparkContext sc = new JavaSparkContext(conf);

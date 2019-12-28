@@ -1,6 +1,7 @@
 package org.arpit.spark.stream00.common;
 
-import org.arpit.spark.common.util.Employee;
+import org.arpit.spark.common.pojo.Employee;
+import org.arpit.spark.common.util.EmployeeUtil;
 
 import java.io.PrintWriter;
 import java.net.ServerSocket;
@@ -19,7 +20,7 @@ public class C01SocketProducer {
         PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), true);
 
         while (true) {
-            String employeeJson = Employee.buildRandomEmployeeJson();
+            String employeeJson = EmployeeUtil.buildRandomEmployeeJson();
             printWriter.println(employeeJson);
             System.out.println("Sent employee to socket port " + employeeJson + " at : " + new Date());
 
