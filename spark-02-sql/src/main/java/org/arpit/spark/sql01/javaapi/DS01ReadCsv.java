@@ -1,4 +1,4 @@
-package org.arpit.spark.sql01.basics;
+package org.arpit.spark.sql01.javaapi;
 
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;

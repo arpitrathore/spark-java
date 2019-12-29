@@ -51,10 +51,10 @@ public class EmployeeUtil {
             employee.setEmail(faker.internet().emailAddress());
             employee.setMobile(faker.phoneNumber().cellPhone());
             employee.setSalary(faker.number().randomDouble(2, 60000, 200000));
-            employee.setCompanyName(faker.company().name());
+            employee.setCompanyName(faker.company().name().replaceAll(",", ""));
             employee.setJobTitle(faker.job().title());
             employee.setCity(faker.address().city());
-            employee.setCountry(faker.address().country());
+            employee.setCountry("India");
             employees.add(employee);
         }
         return employees;

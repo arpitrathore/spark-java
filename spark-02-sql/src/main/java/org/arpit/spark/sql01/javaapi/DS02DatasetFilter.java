@@ -1,4 +1,4 @@
-package org.arpit.spark.sql01.basics;
+package org.arpit.spark.sql01.javaapi;
 
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
@@ -6,7 +6,6 @@ import org.apache.spark.sql.SparkSession;
 
 import static org.apache.spark.sql.functions.*;
 
-import org.apache.spark.sql.functions;
 import org.arpit.spark.common.util.LoggerUtil;
 
 /**
@@ -42,7 +41,7 @@ public class DS02DatasetFilter {
         // Filter using column expression
         final Dataset<Row> mumbaiManagerEmployees = dataset.filter(col("city").equalTo("Mumbai")
                 .and(col("jobTitle").like("%Manager%")));
-        System.out.println("Count of Mumbai managers employees : " + mumbaiManagerEmployees.count());
+        System.out.println("Count of Mumbai managers : " + mumbaiManagerEmployees.count());
         mumbaiManagerEmployees.show(5);
 
     }
