@@ -30,6 +30,9 @@ public class DS04DatasetAggregation {
 
         Dataset<Row> employeesByJobTitle = dataset.groupBy(col("jobTitle")).count()
                 .orderBy(col("count").desc());
+        //Same as below
+        /*employeesByJobTitle = dataset.groupBy(col("jobTitle")).agg(count(col("*")).alias("job_count"))
+                .orderBy(col("job_count").desc());*/
         employeesByJobTitle.show(5, false);
 
         Dataset<Row> employeesByYoj = dataset
