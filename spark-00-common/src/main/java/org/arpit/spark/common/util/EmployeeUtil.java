@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 public class EmployeeUtil {
 
-    private static transient ObjectMapper OBJECT_MAPPER = new ObjectMapper();
+    private static ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
     public static Employee fromJson(String employeeJson) {
         try {
